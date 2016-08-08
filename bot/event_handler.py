@@ -46,7 +46,7 @@ class RtmEventHandler(object):
                     self.msg_writer.write_greeting(event['channel'], event['user'])
                 elif 'joke' in msg_txt:
                     self.msg_writer.send_message(event['channel'], "you are in mood for jokes today, that's good")
-                    self.msg_writer.write_joke()
+                    self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:
                     self.msg_writer.demo_attachment(event['channel'])
                 else:
